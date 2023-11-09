@@ -74,11 +74,12 @@ public class InfoUserActivity extends AppCompatActivity {
                 writeToJsonFile(user, "user.json");
 
                 Intent mainIntent = new Intent(InfoUserActivity.this, MainActivity.class);
-                startActivity(mainIntent);
-                finish();
-                /*//Envoi dans l'activité SynchroActivity
+                //startActivity(mainIntent);
+                //finish();
+                //Envoi dans l'activité SynchroActivity
                 Intent synchroActivityIntent = new Intent(InfoUserActivity.this, SynchroActivity.class);
-                startActivity(synchroActivityIntent);*/
+                startActivity(synchroActivityIntent);
+                finish();
             }
         });
 

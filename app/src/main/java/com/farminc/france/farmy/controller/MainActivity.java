@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 import com.farminc.france.farmy.InfoUserActivity;
 import com.farminc.france.farmy.R;
+import com.farminc.france.farmy.SynchroActivity;
 import com.google.gson.Gson;
 
 import org.json.JSONObject;
@@ -49,18 +50,25 @@ public class MainActivity extends AppCompatActivity {
                 //Lecture du fichier JSON
                 User read = readFromJsonFile("user.json");
 
-                if(read == null) {
+                if (read == null) {
                     Log.d("Test", "Null");
-                    //Start InfoUserActivity
+
+                    // Démarrer InfoUserActivity
                     Intent infoUserIntent = new Intent(MainActivity.this, InfoUserActivity.class);
                     startActivity(infoUserIntent);
                     finish();
-                }
-                else {
+                } else {
                     Log.d("Test", "Non null");
+
+                    // Démarrer SynchroActivity
+                    Intent synchroIntent = new Intent(MainActivity.this, SynchroActivity.class);
+                    startActivity(synchroIntent);
+                    finish();
+
                 }
 
-                /*User readTest = readFromJsonFile("user.json");
+
+                User readTest = readFromJsonFile("user.json");
 
                 if(readTest == null) {
                     Log.d("Test", "Null");
@@ -69,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("Test", "Non null");
                     String name = readTest.getFirstName();
                     Log.d("Test", name);
-                }*/
+                }
 
                 return false;
             }
