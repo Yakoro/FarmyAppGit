@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Supprimer l'utilisateur
         //User write = null;
         //writeToJsonFile(write, "user.json");
 

@@ -6,11 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".FullFarmyActivity">
 
+    <Button
+        android:id="@+id/first_floor_button"
+        android:layout_width="124dp"
+        android:layout_height="80dp"
+        android:text="Button"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_floor_button"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <Button
+        android:id="@+id/second_floor_button"
+        android:layout_width="124dp"
+        android:layout_height="80dp"
+        android:text="Button"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/third_floor_button" />
+
+    <Button
+        android:id="@+id/third_floor_button"
+        android:layout_width="124dp"
+        android:layout_height="80dp"
+        android:text="Button"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Full Farmy activity"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,4 +62,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/full_farmy" />
+
+    <TextView
+        android:id="@+id/waterTankText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/nutrimentTankText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/nutrimentTankText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
