@@ -23,6 +23,9 @@ import okhttp3.Response;
 
 public class SecondFloorActivity extends AppCompatActivity {
     private Button backButton;
+    int temperature_needed = 21;
+    int moisure_needed = 20;
+    int luminosity_needed = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,15 +106,15 @@ public class SecondFloorActivity extends AppCompatActivity {
             public void run() {
                 TextView tempText = findViewById(R.id.tempText);
                 String temperature_string = String.valueOf(temperature);
-                tempText.setText("Température : " + temperature_string + " °C");
+                tempText.setText("Température : " + temperature_string + " °C  |  Requise : " + temperature_needed + " °C");
 
                 TextView moisureText = findViewById(R.id.moisureText);
                 String moisure_string = String.valueOf(moisure);
-                moisureText.setText("Humidité : " + moisure_string + " %");
+                moisureText.setText("Humidité : " + moisure_string + " %  |  Requise : " + moisure_needed + " %");
 
                 TextView lumiText = findViewById(R.id.lumiText);
                 String luminosity_string = String.valueOf(luminosity);
-                lumiText.setText("Luminosity : " + luminosity_string + " lux");
+                lumiText.setText("Luminosity : " + luminosity_string + " lux  |  Requise : " + luminosity_needed + " lux");
             }
         });
     }
