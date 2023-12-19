@@ -17,8 +17,10 @@ import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 
@@ -38,6 +40,7 @@ public class FirstFloorActivity extends AppCompatActivity {
         // Appel à la méthode pour récupérer les données de l'API
         getDataFromAPI();
 
+
         backButton = findViewById(R.id.back);
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +53,51 @@ public class FirstFloorActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public class APIClient {
+
+        public void sendDataToAPI() {
+            OkHttpClient client = new OkHttpClient();
+
+            // Créer un objet JSON avec les variables int
+            JSONObject json = new JSONObject();
+            try {
+                json.put("temperature", temperature_needed);
+                json.put("moisure", moisure_needed);
+                json.put("luminosity", luminosity_needed);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            // Définir le type de média pour les données JSON
+            MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+            // Créer le corps de la requête avec les données JSON
+            RequestBody body = RequestBody.create(json.toString(), JSON);
+
+            // Créer la requête POST avec le corps et l'URL de votre API
+            Request request = new Request.Builder()
+                    .url("http://192.168.1.10/etage_0/")
+                    .post(body)
+                    .build();
+
+            // Exécuter la requête de manière asynchrone
+            try {
+                Response response = client.newCall(request).execute();
+                // Vérifier si la requête a réussi ou non
+                if (response.isSuccessful()) {
+                    // Traitement de la réponse réussie ici
+                    String responseData = response.body().string();
+                    // Utilisez responseData pour traiter la réponse de l'API
+                } else {
+                    // Gérer les réponses non réussies ici
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Gérer les exceptions lors de l'exécution de la requête
+            }
+        }
     }
 
     private void getDataFromAPI() {

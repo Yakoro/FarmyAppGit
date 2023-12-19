@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Supprimer l'utilisateur
-        //User write = null;
-        //writeToJsonFile(write, "user.json");
-
         ConstraintLayout mMainLayout = (ConstraintLayout) findViewById(R.id.main_layout);
         mMainLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
