@@ -46,20 +46,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 
-                Log.d("Test", "Click");
-
                 //Lecture du fichier JSON
                 User read = readFromJsonFile("user.json");
 
                 if (read == null) {
-                    Log.d("Test", "Null");
 
                     // Démarrer InfoUserActivity
                     Intent infoUserIntent = new Intent(MainActivity.this, InfoUserActivity.class);
                     startActivity(infoUserIntent);
                     finish();
                 } else {
-                    Log.d("Test", "Non null");
 
                     // Démarrer SynchroActivity
                     Intent synchroIntent = new Intent(MainActivity.this, SynchroActivity.class);
@@ -68,16 +64,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-
                 User readTest = readFromJsonFile("user.json");
 
                 if(readTest == null) {
-                    Log.d("Test", "Null");
                 }
                 else {
-                    Log.d("Test", "Non null");
                     String name = readTest.getFirstName();
-                    Log.d("Test", name);
                 }
 
                 return false;
@@ -102,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     //Fonction pour la lecture du fichier JSON
     private User readFromJsonFile(String fileName) {
         Gson gson = new Gson();
@@ -126,17 +117,3 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-class User {
-    private String _name;
-
-    public User(String name) {
-        this._name = name;
-    }
-    public String getFirstName() {
-        return _name;
-    }
-
-    public void setFirstName(String name) {
-        _name = name;
-    }
-}
