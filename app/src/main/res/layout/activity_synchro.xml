@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SynchroActivity"
-    android:background="#FFFFFF">
+    android:background="#D3C3B0">
 
     <Button
         android:id="@+id/full_farmy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to the main page"
+        android:text="Page principale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:id="@+id/deleteUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete User"
+        android:text="Suppr User"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

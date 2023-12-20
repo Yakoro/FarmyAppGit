@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InfoUserActivity"
-    android:background="#FFFFFF">
+    android:background="#D3C3B0">
 
     <TextView
         android:id="@+id/textView"
@@ -23,8 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:layout_marginTop="384dp"
-        />
+        android:layout_marginTop="384dp" />
 
     <Button
         android:id="@+id/info_button_name"

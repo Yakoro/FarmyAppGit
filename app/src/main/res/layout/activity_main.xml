@@ -8,7 +8,7 @@
     tools:context=".controller.MainActivity"
     android:name=".MainActivity"
     android:label="@string/app_name"
-    android:background="#FFFFFF">
+    android:background="#D3C3B0">
 
     <TextView
         android:text="Farmy"

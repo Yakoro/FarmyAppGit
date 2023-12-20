@@ -39,7 +39,6 @@ public class InfoUserActivity extends AppCompatActivity {
         mButtonName.setEnabled(false);
 
         //On regarde quand du texte est tapé
-
         mEditTextName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

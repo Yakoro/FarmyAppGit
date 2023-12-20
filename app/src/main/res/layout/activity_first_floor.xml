@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFloorActivity"
-    android:background="#FFFFFF">
+    android:background="#D3C3B0">
 
     <TextView
         android:id="@+id/infoText"

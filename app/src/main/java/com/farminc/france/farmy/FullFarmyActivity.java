@@ -27,6 +27,7 @@ public class FullFarmyActivity extends AppCompatActivity {
     private Button firstFloorButton;
     private Button secondFloorButton;
     private Button thirdFloorButton;
+    private Button backButton;
 
     int firstButton = 0;
     int secondButton = 0;
@@ -48,6 +49,7 @@ public class FullFarmyActivity extends AppCompatActivity {
         firstFloorButton = findViewById(R.id.first_floor_button);
         secondFloorButton = findViewById(R.id.second_floor_button);
         thirdFloorButton = findViewById(R.id.third_floor_button);
+        backButton = findViewById(R.id.back_button);
 
         getDataFromAPI();
 
@@ -84,6 +86,16 @@ public class FullFarmyActivity extends AppCompatActivity {
                     startActivity(thirdFloorIntent);
                     finish();
                 }
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    // Démarrer SynchroActivity
+                    Intent synchroIntent = new Intent(FullFarmyActivity.this, SynchroActivity.class);
+                    startActivity(synchroIntent);
+                    finish();
             }
         });
 
