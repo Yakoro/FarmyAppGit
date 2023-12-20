@@ -78,7 +78,7 @@ public class FirstFloorActivity extends AppCompatActivity {
 
             // Créer la requête POST avec le corps et l'URL de votre API
             Request request = new Request.Builder()
-                    .url("http://192.168.1.10/etage_0/")
+                    .url("http://192.168.221.100/etage_0/")
                     .post(body)
                     .build();
 

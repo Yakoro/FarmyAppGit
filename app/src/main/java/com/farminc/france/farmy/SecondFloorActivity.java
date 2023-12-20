@@ -54,7 +54,7 @@ public class SecondFloorActivity extends AppCompatActivity {
 
         // Créer la requête
         Request request = new Request.Builder()
-                .url("http://192.168.1.10/etage_1/")
+                .url("http://192.168.221.100/etage_1/")
                 .build();
 
         // Faire la requête de manière asynchrone

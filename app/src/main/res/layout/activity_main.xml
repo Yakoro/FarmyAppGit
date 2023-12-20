@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:id="@+id/main_layout"
     tools:context=".controller.MainActivity"
-
     android:name=".MainActivity"
-    android:label="@string/app_name">
+    android:label="@string/app_name"
+    android:background="#FFFFFF">
 
     <TextView
         android:text="Farmy"
@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:layout_marginTop="384dp"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textColor="#000000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
